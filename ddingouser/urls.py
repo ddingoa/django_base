@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import * # user>views에서 모든 함수를 가져온다.
+from ddingouser.views import UserCreateView
 
-app_name = "ddingouser"
-urlpatterns = [
+urlpatterms = [
+    path('v1/users/create/',UserCreateView.as_view(), name='apis_v1_user'),
 ]
+
